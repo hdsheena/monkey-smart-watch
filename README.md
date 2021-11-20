@@ -4,9 +4,21 @@ reverse engineering attempt for Anex Monkey SmartWatch
 What I know so far:
 BLE Chip: Pixart Par2801 https://fccid.io/2AIPB-PAJ2801UA-40/User-Manual/Users-Manual-3083972
 
-Heart rate and BP data:
+4th byte seems to indicate what kind of data is transferring?
+
+| Byte  | Guess at what it means | Example
+| ------------- | ------------- | ------
+| 80  | Ring a device  | aeba3880010001
+| 08  | Raise to Wake toggle | ae921080010001
+| 01 |  ... | ae0038010400b80b0000
+| 21 |  ... | ae5a3821020000ff
+
+# Heart rate and BP data:
+
 Bytes 4-10 are either:
+
 244000150b1414 - blood pressure?
+
 240700150b1401 - not bp. maybe hr?
 
 | Command  | first 3 bytes | Last 4 bytes
