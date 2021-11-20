@@ -4,6 +4,11 @@ reverse engineering attempt for Anex Monkey SmartWatch
 What I know so far:
 BLE Chip: Pixart Par2801 https://fccid.io/2AIPB-PAJ2801UA-40/User-Manual/Users-Manual-3083972
 
+Heart rate and BP data:
+Bytes 4-10 are either:
+244000150b1414 - blood pressure?
+240700150b1401 - not bp. maybe hr?
+
 | Command  | first 3 bytes | Last 4 bytes
 | ------------- | ------------- | ------
 | Ring phone from watch  | aeba38  | 80010001
@@ -30,3 +35,6 @@ Wireshark logs source data:
 15289	6791.288355	Google_0d:c2:6c (Pixel 5)	f8:26:94:24:7f:00 (ThinFit-36)	ATT	19	ae615808010000	Nov 20, 2021 12:23:17.156239000 PST	raise to wake off	Sent Write Request, Handle: 0x0020 (Unknown: Unknown)
 14856	6722.611389	Google_0d:c2:6c (Pixel 5)	f8:26:94:24:7f:00 (ThinFit-36)	ATT	20	ae61302d02000101	Nov 20, 2021 12:22:08.479273000 PST	ask watch for heartrate	Sent Write Request, Handle: 0x0020 (Unknown: Unknown)
 ```
+
+
+https://docs.google.com/spreadsheets/d/1Ple4YaWk5sm64zbLxi8QcCqBqfklNmR-aAzLxdn_XLo/edit#gid=0
