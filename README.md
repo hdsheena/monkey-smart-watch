@@ -2,6 +2,9 @@
 reverse engineering attempt for Anex Monkey SmartWatch
 
 What I know so far:
+
+It's probably equivalent to the Atmos Fit Vitali+ and the Lingyue bands.
+
 BLE Chip: Pixart Par2801 https://fccid.io/2AIPB-PAJ2801UA-40/User-Manual/Users-Manual-3083972
 
 4th byte seems to indicate what kind of data is transferring?
